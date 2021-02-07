@@ -1,7 +1,7 @@
 #Modulos de node.
 node_modules
 
-#Bariables de entorno.
+#variables de entorno.
 .env
 
 #Mantener directorio.

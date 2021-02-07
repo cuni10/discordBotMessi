@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 module.exports = {
 
     name:"twitch",
-    description:"Busca stramer en vivo.",
+    description:"Busca streamer en vivo.",
     execute(message,args) {
 
         var info = {

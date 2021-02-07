@@ -7,3 +7,4 @@ node_modules
 #Mantener directorio.
 images/*
 !images/.gitkeep
+!images/twitch.png

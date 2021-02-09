@@ -3,6 +3,7 @@ const fs = require("fs");
 module.exports = {
     name: "help",
     description:"Lista de comandos del bot.",
+    example:"!help",
     execute(message,args){
 
         const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -12,7 +13,7 @@ module.exports = {
         for (const file of commandFiles) {
         const command = require(`./${file}`);
     
-        cadena += `\n- !${command.name} | ${command.description}`;
+        cadena += `\n- ${command.example} | ${command.description}`;
 
         }
         message.reply(

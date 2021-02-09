@@ -63,7 +63,11 @@ module.exports = {
             console.log("Streamer: "+info.name + " - " + info.id);
             console.log("Live: " + info.is_live);
         
-            if(info.is_live === false) return;
+
+            if(info.is_live === false) {
+                message.reply("El streamer indicado no esta en vivo o no existe.")
+                return;
+            }
         
             let response3;
             try {

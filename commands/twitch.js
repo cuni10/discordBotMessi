@@ -23,6 +23,7 @@ module.exports = {
 
         var usuarioTwitch = message.content.slice(8,message.content.length);
 
+        message.delete();
         async function peticion() {
 
             let response;

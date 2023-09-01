@@ -65,7 +65,7 @@ module.exports = {
         
 
             if(info.is_live === false) {
-                message.reply("El streamer indicado no esta en vivo o no existe.")
+                message.reply("El stream no esta en vivo o no existe.")
                 return;
             }
         
@@ -108,8 +108,8 @@ module.exports = {
             ContentEmbed.attachFiles("./images/image.jpg");
             ContentEmbed.attachFiles("./images/twitch.png");
             ContentEmbed.setColor("#6441a5");
-            ContentEmbed.setTitle(`${info.name} ESTA EN VIVO`.toUpperCase());
-            ContentEmbed.setDescription(`${info.title}`);
+            // ContentEmbed.setDescription(`${info.name} ESTA EN VIVO`.toUpperCase());
+            ContentEmbed.setTitle(`${info.title}`);
             ContentEmbed.setImage("attachment://image.jpg");
             ContentEmbed.setFooter(`https://www.twitch.tv/${info.name}`,"attachment://twitch.png");
             ContentEmbed.setURL(`https://www.twitch.tv/${info.name}`);

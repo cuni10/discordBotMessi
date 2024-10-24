@@ -47,13 +47,20 @@ module.exports = {
                 response2 = await apiFetch.getData(`https://api.twitch.tv/helix/search/channels?query=${usuarioTwitch}&first=1`,{
                     Authorization: "Bearer " + info.access_token,
                     "Client-ID": process.env.ID_TWITCH,
+                    
                 });
+                console.log(response2);
             }catch(e){
                 console.log("Error al recuperar datos etapa 1. " + e);
                 return;
             }
             
-        
+            // Si se manda mal el usuario, tira error para evitar crash.
+            if (response.data == null) {
+
+                console.log("Error")
+                return;
+            }
             info.id = response2.data[0].id;
             info.title = response2.data[0].title;
             info.is_live = response2.data[0].is_live;
